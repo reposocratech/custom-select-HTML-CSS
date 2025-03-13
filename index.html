@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Selector personalizado</title>
+  </head>
+  <body>
+    <!-- Select original -->
+    <select class="original-select">
+      <option value="" hidden selected>Selecciona una opción</option>
+      <option value="corazon">
+        ❤️ <span class="description">Corazón</span>
+      </option>
+      <option value="sonrisa">
+        🙂 <span class="description">Sonrisa</span>
+      </option>
+    </select>
+
+    <!-- Select personalizado -->
+    <!-- Por el momento los atributos multiple y size no funcionan -->
+    <select class="custom-select">
+      <button>
+        <selectedcontent></selectedcontent>
+      </button>
+      <option value="" hidden selected>Selecciona una opción</option>
+      <option value="corazon">
+        ❤️ <span class="description">Corazón</span>
+      </option>
+      <option value="sonrisa">
+        🙂 <span class="description">Sonrisa</span>
+      </option>
+    </select>
+  </body>
+</html>
