@@ -71,6 +71,10 @@ body {
       transform: rotateX(180deg);
     }
 
+    selectedcontent {
+      text-box: trim-both ex alphabetic;
+    }
+
     option {
       background-color: lightcyan;
       padding: 0.5rem 1rem;
