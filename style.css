@@ -39,12 +39,11 @@ body {
       border-radius: 0.6rem;
       border: 1px solid darkslategrey;
       box-shadow: 0 0 3px darkslategrey;
+      inline-size: 15rem;
     }
 
     &::picker(select) {
       margin-block-start: 3px;
-      min-inline-size: fit-content;
-      interpolate-size: allow-keywords;
       opacity: 0;
       height: 0;
       overflow: clip;
@@ -55,7 +54,7 @@ body {
 
     &:open::picker(select) {
       opacity: 1;
-      height: auto;
+      height: calc-size(auto, size);
 
       @starting-style {
         opacity: 0;
