@@ -31,17 +31,13 @@ body {
     background-image: none;
     padding-inline: 16px;
 
-    selectedcontent {
-      text-box: trim-both ex alphabetic;
-    }
-
     &,
     &::picker(select) {
+      min-width: 14rem;
       appearance: base-select;
       border-radius: 9.6px;
       border: 0.0625rem solid darkslategrey;
       box-shadow: 0 0 0.1875rem darkslategrey;
-      inline-size: 15rem;
     }
 
     &::picker(select) {
