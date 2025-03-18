@@ -4,50 +4,55 @@ body {
 
 .original-select {
   cursor: pointer;
-  margin-bottom: 2rem;
-  padding: 0.5rem 1rem;
-  border-radius: 0.6rem;
-  border: 2px solid black;
+  margin-bottom: 32px;
+  padding: 8px 16px;
+  border-radius: 9.6px;
+  border: 0.125rem solid black;
   background-color: lightgoldenrodyellow;
 }
 
+/* Ejemplos: https://codepen.io/collection/BNZjPe */
 .custom-select {
   appearance: none;
   cursor: pointer;
-  margin-bottom: 2rem;
-  border-radius: 0.6rem;
-  border: 1px solid darkslategrey;
-  box-shadow: 0 0 3px darkslategrey;
+  margin-bottom: 32px;
+  border-radius: 9.6px;
+  border: 0.0625rem solid darkslategrey;
+  box-shadow: 0 0 0.1875rem darkslategrey;
   color: white;
   display: flex;
   align-items: center;
-  padding-block: 0.5rem;
-  padding-inline: 1rem 2.2rem;
-  /* prettier-ignore */
-  background: 
-    darkcyan 
-    url('caret-down.svg') 
-    right 10px center / 1.2rem no-repeat;
+  padding-block: 8px;
+  padding-inline: 16px 35.2px;
+  background:
+    darkcyan url('caret-down.svg') right 0.625rem center / 19.2px no-repeat;
 
   @supports (appearance: base-select) {
     background-image: none;
-    padding-inline: 1rem;
+    padding-inline: 16px;
+
+    selectedcontent {
+      text-box: trim-both ex alphabetic;
+    }
 
     &,
     &::picker(select) {
       appearance: base-select;
-      border-radius: 0.6rem;
-      border: 1px solid darkslategrey;
-      box-shadow: 0 0 3px darkslategrey;
+      border-radius: 9.6px;
+      border: 0.0625rem solid darkslategrey;
+      box-shadow: 0 0 0.1875rem darkslategrey;
       inline-size: 15rem;
     }
 
     &::picker(select) {
-      margin-block-start: 3px;
+      margin-block-start: 0.1875rem;
       opacity: 0;
       height: 0;
       overflow: clip;
-      transition: height 0.5s ease-out, opacity 0.5s ease-out, overlay 0.5s,
+      transition:
+        height 0.5s ease-out,
+        opacity 0.5s ease-out,
+        overlay 0.5s,
         display 0.5s;
       transition-behavior: allow-discrete;
     }
@@ -63,7 +68,12 @@ body {
     }
 
     &::picker-icon {
-      content: url('caret-down.svg');
+      content: '';
+      width: 1.5rem;
+      aspect-ratio: 1;
+      background-image: url('caret-down.svg');
+      background-size: cover;
+      translate: 0.3125rem;
       transition: transform 0.2s ease-out;
     }
 
@@ -71,13 +81,9 @@ body {
       transform: rotateX(180deg);
     }
 
-    selectedcontent {
-      text-box: trim-both ex alphabetic;
-    }
-
     option {
       background-color: lightcyan;
-      padding: 0.5rem 1rem;
+      padding: 8px 16px;
       transition: background-color 0.3s ease-out, color 0.3s ease-out;
 
       &::checkmark {
