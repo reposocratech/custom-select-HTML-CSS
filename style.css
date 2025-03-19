@@ -1,7 +1,3 @@
-body {
-  font-family: sans-serif;
-}
-
 .original-select {
   cursor: pointer;
   margin-block-end: 2rem;
@@ -94,5 +90,40 @@ body {
         color: white;
       }
     }
+  }
+}
+
+@layer base {
+  body {
+    font-family: sans-serif;
+  }
+
+  header {
+    background-color: darkred;
+    color: white;
+    text-align: center;
+    font-size: 1.3rem;
+    padding: 0.5rem 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    @supports (appearance: base-select) {
+      display: none;
+    }
+  }
+
+  main {
+    margin-block-start: 6.5rem;
+
+    @supports (appearance: base-select) {
+      margin-block-start: 0;
+    }
+  }
+
+  label {
+    display: block;
+    margin-block-end: 0.5rem;
   }
 }

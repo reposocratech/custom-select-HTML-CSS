@@ -7,38 +7,49 @@
     <title>Selector personalizado</title>
   </head>
   <body>
-    <!-- Select original -->
-    <select class="original-select">
-      <option value="" hidden selected>Selecciona una opción</option>
-      <option value="corazon">
-        ❤️ <span class="description">Corazón</span>
-      </option>
-      <option value="sonrisa">
-        🙂 <span class="description">Sonrisa</span>
-      </option>
-      <option value="lengua">🤪 <span class="description">Payaso</span></option>
-      <option value="ordenador">
-        🖥️ <span class="description">Ordenador</span>
-      </option>
-    </select>
+    <header>
+      <p>⚠️ ¡Este navegador no soporta los nuevos custom select!</p>
+    </header>
 
-    <!-- Select personalizado -->
-    <!-- Por el momento los atributos multiple y size no funcionan -->
-    <select class="custom-select">
-      <button>
-        <selectedcontent></selectedcontent>
-      </button>
-      <option value="" hidden selected>Selecciona una opción</option>
-      <option value="corazon">
-        ❤️ <span class="description">Corazón</span>
-      </option>
-      <option value="sonrisa">
-        🙂 <span class="description">Sonrisa</span>
-      </option>
-      <option value="lengua">🤪 <span class="description">Payaso</span></option>
-      <option value="ordenador">
-        🖥️ <span class="description">Ordenador</span>
-      </option>
-    </select>
+    <main>
+      <!-- Select original -->
+      <label for="classic-select">Select clásico</label>
+      <select class="original-select" id="classic-select">
+        <option value="" hidden selected>Selecciona una opción</option>
+        <option value="corazon">
+          ❤️ <span class="description">Corazón</span>
+        </option>
+        <option value="sonrisa">
+          🙂 <span class="description">Sonrisa</span>
+        </option>
+        <option value="lengua">
+          🤪 <span class="description">Payaso</span>
+        </option>
+        <option value="ordenador">
+          🖥️ <span class="description">Ordenador</span>
+        </option>
+      </select>
+      <!-- Select personalizado -->
+      <!-- Por el momento los atributos multiple y size no funcionan -->
+      <label for="custom-select">Select personalizado</label>
+      <select class="custom-select" id="custom-select">
+        <button>
+          <selectedcontent></selectedcontent>
+        </button>
+        <option value="" hidden selected>Selecciona una opción</option>
+        <option value="corazon">
+          ❤️ <span class="description">Corazón</span>
+        </option>
+        <option value="sonrisa">
+          🙂 <span class="description">Sonrisa</span>
+        </option>
+        <option value="lengua">
+          🤪 <span class="description">Payaso</span>
+        </option>
+        <option value="ordenador">
+          🖥️ <span class="description">Ordenador</span>
+        </option>
+      </select>
+    </main>
   </body>
 </html>
