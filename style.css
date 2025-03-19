@@ -4,40 +4,41 @@ body {
 
 .original-select {
   cursor: pointer;
-  margin-bottom: 32px;
-  padding: 8px 16px;
-  border-radius: 9.6px;
+  margin-block-end: 2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.6rem;
   border: 0.125rem solid black;
   background-color: lightgoldenrodyellow;
 }
 
 /* Ejemplos: https://codepen.io/collection/BNZjPe */
 .custom-select {
+  /* Estilos para navegadores sin compatibilidad con appearance: base-select */
   appearance: none;
   cursor: pointer;
-  margin-bottom: 32px;
-  border-radius: 9.6px;
+  border-radius: 0.6rem;
   border: 0.0625rem solid darkslategrey;
-  box-shadow: 0 0 0.1875rem darkslategrey;
+  box-shadow: 0 0 3px darkslategrey;
   color: white;
-  display: flex;
-  align-items: center;
-  padding-block: 8px;
-  padding-inline: 16px 35.2px;
+  padding-block: 0.5rem;
+  padding-inline: 1rem 2.5rem;
   background:
-    darkcyan url('caret-down.svg') right 0.625rem center / 19.2px no-repeat;
+    darkslategrey url('caret-down.svg') right 0.625rem center / 1.5rem no-repeat;
 
+  /* Estilos para navegadores con compatibilidad con appearance: base-select */
   @supports (appearance: base-select) {
     background-image: none;
-    padding-inline: 16px;
+    padding-inline: 1rem;
+    display: flex;
+    align-items: center;
 
     &,
     &::picker(select) {
-      min-width: 14rem;
       appearance: base-select;
-      border-radius: 9.6px;
+      min-width: 14rem;
+      border-radius: 0.6rem;
       border: 0.0625rem solid darkslategrey;
-      box-shadow: 0 0 0.1875rem darkslategrey;
+      box-shadow: 0 0 3px darkslategrey;
     }
 
     &::picker(select) {
@@ -79,22 +80,18 @@ body {
 
     option {
       background-color: lightcyan;
-      padding: 8px 16px;
+      padding: 0.5rem 1rem;
       transition: background-color 0.3s ease-out, color 0.3s ease-out;
 
       &::checkmark {
-        content: '✅';
-        /* display: none; */
+        /* content: '✅'; */
+        display: none;
       }
 
       &:hover,
       &:checked {
         background-color: darkcyan;
         color: white;
-      }
-
-      &:not(:checked)::checkmark {
-        display: none;
       }
     }
   }
